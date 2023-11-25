@@ -128,6 +128,13 @@ docker logs jibber-native
 docker kill jibber-native
 ```
 
+## FaQ
+
+1. how to clean docker cache:
+```shell
+docker builder prune
+```
+
 ## Reference
 
 1. [Lunar Lab](https://luna.oracle.com/lab/fdfd090d-e52c-4481-a8de-dccecdca7d68/launch)
