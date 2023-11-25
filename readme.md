@@ -1,5 +1,12 @@
 # ReadMe
 
+## Prerequisite
+
+- install GraalVM CE
+   ```shell
+   sdk install java 21-graalce
+   ```
+
 ## verify versions
 
 ```shell
@@ -9,23 +16,26 @@ native-image --version # see 21
 
 ## traditional build
 
+### plain build
+
+1. mvn build
 ```shell
 mvn clean package && java -jar ./target/jibber-0.0.1-SNAPSHOT-exec.jar &
 ```
 
-### test
+2. test
 
 ```shell
 curl http://localhost:8080/jibber
 ```
 
-### kill process
+3. kill process
 
 ```shell
 fg # bring to foreground then Ctrl-C
 ```
 
-### docker
+### docker build
 
 1. build docker image
     ```shell
@@ -62,15 +72,26 @@ fg # bring to foreground then Ctrl-C
 
 ### run `native` profile
 
+1. mvn build
 ```shell
 mvn package -Pnative # take ~10min
 ```
 
-### check and run
+2. check and run
 
 ```shell
 ls -lh target/jibber;
 ./target/jibber &
+```
+
+3. test
+```shell
+curl http://localhost:8080/jibber
+```
+
+4. terminate process
+```shell
+fg # bring to foreground then Ctrl-C
 ```
 
 ### docker the native image
@@ -102,4 +123,7 @@ curl http://localhost:8080/jibber && docker logs jibber-native
 docker kill jibber-native
 ```
 
+## Reference
 
+1. [Lunar Lab](https://luna.oracle.com/lab/fdfd090d-e52c-4481-a8de-dccecdca7d68/launch)
+2. [sdkman](https://sdkman.io/)

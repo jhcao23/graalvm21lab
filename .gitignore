@@ -1,5 +1,8 @@
 target
 
+# IDE
+.idea
+
 # Compiled class file
 *.class
 
