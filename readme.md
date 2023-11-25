@@ -115,10 +115,15 @@ docker run --rm -d --name "jibber-native" -p 8080:8080 localhost/jibber:native.0
 
 4. test
 ```shell
-curl http://localhost:8080/jibber && docker logs jibber-native
+curl http://localhost:8080/jibber
 ```
 
-5. terminate the running docker
+5. check log
+```shell
+docker logs jibber-native
+```
+
+6. terminate the running docker
 ```shell
 docker kill jibber-native
 ```
