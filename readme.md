@@ -76,6 +76,10 @@ fg # bring to foreground then Ctrl-C
 ```shell
 mvn package -Pnative # take ~10min
 ```
+```shell
+# or use spring boot plugin
+mvn -Pnative native:compile
+```
 
 2. check and run
 
