@@ -1,4 +1,4 @@
-FROM container-registry.oracle.com/java/openjdk:17-oraclelinux8
+FROM container-registry.oracle.com/java/openjdk:21-oraclelinux8
 
 ARG JAR_FILE
 
