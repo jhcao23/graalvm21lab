@@ -128,6 +128,15 @@ docker logs jibber-native
 docker kill jibber-native
 ```
 
+## gradle build
+
+```shell
+gradle clean build && gradle bootRun;
+gradle nativeCompile && build/native/nativeCompile/graalvm21lab;
+# build docker native image, not yet working, wait for java 21
+gradle bootBuildImage;
+```
+
 ## FaQ
 
 1. how to clean docker cache:
@@ -139,3 +148,4 @@ docker builder prune
 
 1. [Lunar Lab](https://luna.oracle.com/lab/fdfd090d-e52c-4481-a8de-dccecdca7d68/launch)
 2. [sdkman](https://sdkman.io/)
+3. [Spring Blog Sep 2023](https://spring.io/blog/2023/09/09/all-together-now-spring-boot-3-2-graalvm-native-images-java-21-and-virtual)
